@@ -52,132 +52,99 @@ public class UI extends Frame implements ActionListener {
         add(qisma);
         add(equal);
         add(cc);
-        cc.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                numberDisplay.setText("0");
-                p.setUsed(false);
-                q.setUsed(false);
-                m.setUsed(false);
-                x.setUsed(false);
-            }
+        cc.addActionListener(e -> {
+            numberDisplay.setText("0");
+            p.setUsed(false);
+            q.setUsed(false);
+            m.setUsed(false);
+            x.setUsed(false);
         });
 
-        Number0.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        Number0.addActionListener(e -> {
                 numberDisplay.setText(numberDisplay.getText() + 0);
                 int count = Integer.parseInt(numberDisplay.getText());
                 numberDisplay.setText(count + "");
-            }
+
         });
-        Number1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        Number1.addActionListener(e -> {
                 numberDisplay.setText(numberDisplay.getText() + 1);
                 int count = Integer.parseInt(numberDisplay.getText());
                 numberDisplay.setText(count + "");
-            }
+
         });
-        Number2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        Number2.addActionListener(e -> {
                 numberDisplay.setText(numberDisplay.getText() + 2);
                 int count = Integer.parseInt(numberDisplay.getText());
                 numberDisplay.setText(count + "");
-            }
+
         });
-        Number3.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        Number3.addActionListener(e -> {
                 numberDisplay.setText(numberDisplay.getText() + 3);
                 int count = Integer.parseInt(numberDisplay.getText());
                 numberDisplay.setText(count + "");
-            }
+
         });
-        Number4.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        Number4.addActionListener(e -> {
                 numberDisplay.setText(numberDisplay.getText() + 4);
                 int count = Integer.parseInt(numberDisplay.getText());
                 numberDisplay.setText(count + "");
-            }
+
         });
-        Number5.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        Number5.addActionListener(e -> {
                 numberDisplay.setText(numberDisplay.getText() + 5);
                 int count = Integer.parseInt(numberDisplay.getText());
                 numberDisplay.setText(count + "");
-            }
+
         });
-        Number6.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        Number6.addActionListener(e -> {
                 numberDisplay.setText(numberDisplay.getText() + 6);
                 int count = Integer.parseInt(numberDisplay.getText());
                 numberDisplay.setText(count + "");
-            }
+
         });
-        Number7.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        Number7.addActionListener(e -> {
                 numberDisplay.setText(numberDisplay.getText() + 7);
                 int count = Integer.parseInt(numberDisplay.getText());
                 numberDisplay.setText(count + "");
-            }
+
         });
-        Number8.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        Number8.addActionListener(e -> {
                 numberDisplay.setText(numberDisplay.getText() + 8);
                 int count = Integer.parseInt(numberDisplay.getText());
                 numberDisplay.setText(count + "");
-            }
+
         });
-        Number9.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        Number9.addActionListener(e -> {
                 numberDisplay.setText(numberDisplay.getText() + 9);
                 int count = Integer.parseInt(numberDisplay.getText());
                 numberDisplay.setText(count + "");
-            }
+
         });
-        plus.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        plus.addActionListener(e -> {
                 p.setUsed(true);
                 p.setValue(Integer.parseInt(numberDisplay.getText()));
                 numberDisplay.setText("");
-            }
+
         });
-        minus.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        minus.addActionListener(e -> {
                 m.setUsed(true);
                 m.setValue(Integer.parseInt(numberDisplay.getText()));
                 numberDisplay.setText("");
-            }
+
         });
-        hit.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        hit.addActionListener(e -> {
                 x.setUsed(true);
                 x.setValue(Integer.parseInt(numberDisplay.getText()));
                 numberDisplay.setText("");
-            }
+
         });
-        qisma.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        qisma.addActionListener(e -> {
                 q.setUsed(true);
                 q.setValue(Integer.parseInt(numberDisplay.getText()));
                 numberDisplay.setText("");
-            }
+
         });
-        equal.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        equal.addActionListener(e -> {
                 int count = Integer.parseInt(numberDisplay.getText());
                 if (p.getUsed()) {
                     count += p.getValue();
@@ -196,7 +163,7 @@ public class UI extends Frame implements ActionListener {
                 q.setUsed(false);
                 m.setUsed(false);
                 x.setUsed(false);
-            }
+
         });
 
 
